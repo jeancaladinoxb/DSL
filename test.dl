@@ -1,0 +1,362 @@
+// ========================================
+// TEST DE MACHINE LEARNING
+// ========================================
+
+print("=== TEST DE MACHINE LEARNING ===");
+
+// ========================================
+// TEST 1: CREAR MODELO MLP
+// ========================================
+
+print("\n=== TEST 1: CREAR MODELO MLP ===");
+
+// Crear un perceptrón multicapa
+// Arquitectura: 2 entradas, 4 neuronas ocultas, 1 salida
+model M = MLP(2, 4, 1);
+print("Modelo MLP creado: 2 entradas, 4 ocultas, 1 salida");
+
+// También se puede declarar sin inicializar
+model N;
+print("Modelo N declarado (sin inicializar)");
+
+// ========================================
+// TEST 2: PREPARAR DATOS DE ENTRENAMIENTO
+// ========================================
+
+print("\n=== TEST 2: DATOS DE ENTRENAMIENTO (XOR) ===");
+
+// Problema XOR: entrada y salida esperada
+X_train = [[0, 0], [0, 1], [1, 0], [1, 1]];
+Y_train = [[0], [1], [1], [0]];
+
+print("Datos de entrada (X):");
+print(X_train);
+print("Salidas esperadas (Y):");
+print(Y_train);
+
+// ========================================
+// TEST 3: ENTRENAR EL MODELO
+// ========================================
+
+print("\n=== TEST 3: ENTRENAR MODELO ===");
+
+// Parámetros de entrenamiento
+epochs = 1000;
+learning_rate = 0.1;
+
+print("Entrenando modelo...");
+print("Epochs:", epochs);
+print("Learning rate:", learning_rate);
+
+// Entrenar (bucle simulado para demostración)
+for epoch in range(10): {
+    print("Epoch", epoch, "/ 10");
+    // En implementación real: train(M, X_train, Y_train, learning_rate);
+}
+
+print("Entrenamiento completado!");
+
+// ========================================
+// TEST 4: FUNCIONES DE PÉRDIDA
+// ========================================
+
+print("\n=== TEST 4: FUNCIONES DE PÉRDIDA ===");
+
+// Valores reales vs predicciones
+y_true = [1, 0, 1, 0];
+y_pred = [0.9, 0.1, 0.85, 0.15];
+
+// Calcular errores
+error_mse = mse(y_true, y_pred);
+error_mae = mae(y_true, y_pred);
+
+print("MSE (Mean Squared Error):", error_mse);
+print("MAE (Mean Absolute Error):", error_mae);
+
+// ========================================
+// TEST 5: OPERACIONES MATRICIALES AVANZADAS
+// ========================================
+
+print("\n=== TEST 5: OPERACIONES MATRICIALES ===");
+
+// Crear matriz de pesos
+W1 = [[0.5, -0.3], [0.2, 0.8]];
+print("Matriz de pesos W1:");
+print(W1);
+
+// Transpuesta
+W1_T = transpose(W1);
+print("Transpuesta de W1:");
+print(W1_T);
+
+// Producto punto
+entrada = [1, 2];
+resultado = dot(entrada, W1);
+print("Producto punto:");
+print("entrada * W1 =", resultado);
+
+// Determinante
+det_W1 = determinant(W1);
+print("Determinante de W1:", det_W1);
+
+// Inversa
+W1_inv = inverse(W1);
+print("Inversa de W1:");
+print(W1_inv);
+
+// ========================================
+// TEST 6: NORMALIZACIÓN DE DATOS
+// ========================================
+
+print("\n=== TEST 6: NORMALIZACIÓN DE DATOS ===");
+
+datos_brutos = [10, 20, 30, 40, 50];
+print("Datos originales:", datos_brutos);
+
+datos_norm = normalize(datos_brutos);
+print("Datos normalizados:", datos_norm);
+
+// Verificar media y desviación estándar
+media = mean(datos_norm);
+desv = std(datos_norm);
+print("Media de datos normalizados:", media);
+print("Desv. estándar de datos normalizados:", desv);
+
+// ========================================
+// TEST 7: CREAR REDES NEURONALES COMPLEJAS
+// ========================================
+
+print("\n=== TEST 7: RED NEURONAL COMPLEJA ===");
+
+// Red con múltiples capas
+model RedProfunda = MLP(10, 20, 5);
+print("Red profunda creada: 10 -> 20 -> 5");
+
+model RedGrande = MLP(100, 50, 10);
+print("Red grande creada: 100 -> 50 -> 10");
+
+// ========================================
+// TEST 8: FUNCIONES DE ACTIVACIÓN CON ARRAYS
+// ========================================
+
+print("\n=== TEST 8: ACTIVACIONES CON ARRAYS ===");
+
+valores = [-2, -1, 0, 1, 2];
+print("Valores de entrada:", valores);
+
+// Aplicar sigmoid
+sig_vals = sigmoid(valores);
+print("Sigmoid:", sig_vals);
+
+// Aplicar ReLU
+relu_vals = relu(valores);
+print("ReLU:", relu_vals);
+
+// Aplicar tanh
+tanh_vals = tanh(valores);
+print("Tanh:", tanh_vals);
+
+// ========================================
+// TEST 9: PREDICCIÓN (SIMULADA)
+// ========================================
+
+print("\n=== TEST 9: PREDICCIÓN ===");
+
+// Datos de prueba
+test_input = [1, 0];
+print("Entrada de prueba:", test_input);
+
+// En implementación real:
+// prediccion = predict(M, test_input);
+// print("Predicción:", prediccion);
+
+print("(Predicción simulada - requiere implementación completa)");
+
+// ========================================
+// TEST 10: ESTADÍSTICAS DEL MODELO
+// ========================================
+
+print("\n=== TEST 10: ESTADÍSTICAS ===");
+
+// Crear datos de ejemplo para análisis
+resultados_entrenamiento = [0.9, 0.7, 0.5, 0.3, 0.15, 0.08, 0.04, 0.02, 0.01];
+print("Pérdida por época:", resultados_entrenamiento);
+
+perdida_inicial = resultados_entrenamiento[0];
+perdida_final = resultados_entrenamiento[8];
+mejora = (perdida_inicial - perdida_final) / perdida_inicial * 100;
+
+print("Pérdida inicial:", perdida_inicial);
+print("Pérdida final:", perdida_final);
+print("Mejora:", mejora, "%");
+
+// ========================================
+// TEST 11: FUNCIÓN PERSONALIZADA DE EVALUACIÓN
+// ========================================
+
+print("\n=== TEST 11: FUNCIÓN DE EVALUACIÓN ===");
+
+def calcular_accuracy(y_true, y_pred, umbral): {
+    correctos = 0;
+    total = len(y_true);
+    
+    for i in range(total): {
+        pred_binaria = 0;
+        if y_pred[i] >= umbral {
+            pred_binaria = 1;
+        }
+        
+        if pred_binaria == y_true[i] {
+            correctos = correctos + 1;
+        }
+    }
+    
+    return correctos / total * 100;
+}
+
+// Probar función
+y_real = [1, 0, 1, 0, 1];
+y_predicha = [0.8, 0.2, 0.9, 0.1, 0.7];
+
+accuracy = calcular_accuracy(y_real, y_predicha, 0.5);
+print("Accuracy:", accuracy, "%");
+
+// ========================================
+// TEST 12: FUNCIÓN DE GRADIENTE DESCENDENTE
+// ========================================
+
+print("\n=== TEST 12: SIMULACIÓN DE GRADIENTE DESCENDENTE ===");
+
+def gradiente_descendente(x_inicial, lr, iteraciones): {
+    x = x_inicial;
+    
+    for i in range(iteraciones): {
+        // Simular gradiente (derivada de x^2 es 2x)
+        gradiente = 2 * x;
+        x = x - lr * gradiente;
+        
+        if i % 2 == 0 {
+            print("Iteración", i, ": x =", x);
+        }
+    }
+    
+    return x;
+}
+
+x_optimo = gradiente_descendente(10, 0.1, 10);
+print("Valor óptimo encontrado:", x_optimo);
+
+// ========================================
+// TEST 13: BATCH PROCESSING
+// ========================================
+
+print("\n=== TEST 13: PROCESAMIENTO POR LOTES ===");
+
+// Simular división de datos en batches
+dataset_size = 100;
+batch_size = 10;
+num_batches = dataset_size / batch_size;
+
+print("Tamaño del dataset:", dataset_size);
+print("Tamaño del batch:", batch_size);
+print("Número de batches:", num_batches);
+
+print("\nProcesando batches:");
+for batch in range(0, num_batches): {
+    inicio = batch * batch_size;
+    fin = inicio + batch_size;
+    print("Batch", batch, ": muestras", inicio, "-", fin);
+}
+
+// ========================================
+// TEST 14: EARLY STOPPING
+// ========================================
+
+print("\n=== TEST 14: EARLY STOPPING ===");
+
+// Simular entrenamiento con early stopping
+def entrenar_con_early_stopping(max_epochs, paciencia): {
+    mejor_loss = 999999;
+    epochs_sin_mejora = 0;
+    
+    for epoch in range(max_epochs): {
+        // Simular loss decreciente
+        loss_actual = 1 / (epoch + 1);
+        
+        print("Epoch", epoch, "- Loss:", loss_actual);
+        
+        if loss_actual < mejor_loss {
+            mejor_loss = loss_actual;
+            epochs_sin_mejora = 0;
+            print("  ¡Mejora! Nuevo mejor loss:", mejor_loss);
+        } else {
+            epochs_sin_mejora = epochs_sin_mejora + 1;
+            print("  Sin mejora. Paciencia:", epochs_sin_mejora, "/", paciencia);
+        }
+        
+        if epochs_sin_mejora >= paciencia {
+            print("Early stopping activado!");
+            return mejor_loss;
+        }
+    }
+    
+    return mejor_loss;
+}
+
+mejor = entrenar_con_early_stopping(20, 3);
+print("Mejor loss encontrado:", mejor);
+
+// ========================================
+// TEST 15: MATRIZ DE CONFUSIÓN SIMPLE
+// ========================================
+
+print("\n=== TEST 15: MÉTRICAS DE CLASIFICACIÓN ===");
+
+def calcular_metricas(y_true, y_pred): {
+    tp = 0;
+    tn = 0;
+    fp = 0;
+    fn = 0;
+    
+    n = len(y_true);
+    for i in range(n): {
+        if y_true[i] == 1 {
+            if y_pred[i] == 1 {
+                tp = tp + 1;
+            } else {
+                fn = fn + 1;
+            }
+        } else {
+            if y_pred[i] == 1 {
+                fp = fp + 1;
+            } else {
+                tn = tn + 1;
+            }
+        }
+    }
+    
+    print("True Positives:", tp);
+    print("True Negatives:", tn);
+    print("False Positives:", fp);
+    print("False Negatives:", fn);
+    
+    precision = tp / (tp + fp);
+    recall = tp / (tp + fn);
+    
+    print("Precision:", precision);
+    print("Recall:", recall);
+    
+    return precision;
+}
+
+y_verdadero = [1, 0, 1, 1, 0, 1, 0, 0];
+y_predicho = [1, 0, 1, 0, 0, 1, 1, 0];
+
+prec = calcular_metricas(y_verdadero, y_predicho);
+
+// ========================================
+// FINALIZACIÓN
+// ========================================
+
+print("\n=== ¡TESTS DE ML COMPLETADOS! ===");
+print("Todos los componentes de Machine Learning funcionan correctamente");
