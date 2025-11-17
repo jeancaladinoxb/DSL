@@ -18,7 +18,7 @@ En conjunto, este archivo representa el núcleo sintáctico del proyecto. Todo c
 
 El archivo run.py funciona como el punto de entrada principal del proyecto y es responsable de iniciar el proceso completo de análisis sintáctico de un programa escrito en el lenguaje DeepLearning. Este script carga un archivo de entrada con extensión .dl, lo envía al lexer y al parser generados por ANTLR y produce como salida el árbol sintáctico correspondiente. Su función principal es validar que el código ingresado cumple con la estructura definida en la gramática y, en caso contrario, reportar los errores léxicos o sintácticos detectados.
 
-![Ejecución run.py](Images/01.png)
+![Ejecución run.py](Imagenes/01.png)
 
 El propósito de este archivo es facilitar la ejecución inicial del lenguaje sin necesidad de integrar todavía la lógica de interpretación. run.py se encarga de configurar el flujo básico: lectura del archivo fuente, tokenización, construcción del árbol sintáctico y visualización de la representación estructurada del programa. Esto permite verificar que la gramática funciona correctamente, que los tokens se reconocen de la manera esperada y que las reglas sintácticas están produciendo el árbol apropiado para cada instrucción.
 
