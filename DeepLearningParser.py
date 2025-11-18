@@ -12,7 +12,7 @@ else:
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3k")
-        buf.write("\u0144\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\u014d\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
         buf.write("\4\b\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16")
         buf.write("\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\4\24\t\24\4\25\t\25\4\26\t\26\4\27\t\27\4\30\t\30\4\31")
@@ -41,11 +41,12 @@ def serializedATN():
         buf.write("\31\f\31\16\31\u0116\13\31\3\32\3\32\3\32\7\32\u011b\n")
         buf.write("\32\f\32\16\32\u011e\13\32\3\33\3\33\3\33\7\33\u0123\n")
         buf.write("\33\f\33\16\33\u0126\13\33\3\34\3\34\3\34\5\34\u012b\n")
-        buf.write("\34\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35\3\35")
-        buf.write("\5\35\u0137\n\35\3\36\3\36\3\36\3\36\7\36\u013d\n\36\f")
-        buf.write("\36\16\36\u0140\13\36\3\36\3\36\3\36\2\2\37\2\4\6\b\n")
-        buf.write("\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\668:\2")
-        buf.write("\7\5\2\16\20\22Nff\3\2bc\4\2`ade\3\2OP\4\2QRTT\2\u014e")
+        buf.write("\34\3\35\3\35\3\35\3\35\3\35\3\35\3\35\7\35\u0134\n\35")
+        buf.write("\f\35\16\35\u0137\13\35\3\35\3\35\3\35\3\35\3\35\3\35")
+        buf.write("\3\35\5\35\u0140\n\35\3\36\3\36\3\36\3\36\7\36\u0146\n")
+        buf.write("\36\f\36\16\36\u0149\13\36\3\36\3\36\3\36\2\2\37\2\4\6")
+        buf.write("\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*,.\60\62\64\66")
+        buf.write("8:\2\7\5\2\16\20\22Nff\3\2bc\4\2`ade\3\2OP\4\2QRTT\2\u0158")
         buf.write("\2?\3\2\2\2\4O\3\2\2\2\6Q\3\2\2\2\bV\3\2\2\2\nZ\3\2\2")
         buf.write("\2\f`\3\2\2\2\16k\3\2\2\2\20\177\3\2\2\2\22\u0081\3\2")
         buf.write("\2\2\24\u0098\3\2\2\2\26\u009a\3\2\2\2\30\u00a2\3\2\2")
@@ -53,7 +54,7 @@ def serializedATN():
         buf.write(" \u00d6\3\2\2\2\"\u00de\3\2\2\2$\u00e8\3\2\2\2&\u00f0")
         buf.write("\3\2\2\2(\u00f4\3\2\2\2*\u00fd\3\2\2\2,\u00ff\3\2\2\2")
         buf.write(".\u0107\3\2\2\2\60\u010f\3\2\2\2\62\u0117\3\2\2\2\64\u011f")
-        buf.write("\3\2\2\2\66\u012a\3\2\2\28\u0136\3\2\2\2:\u0138\3\2\2")
+        buf.write("\3\2\2\2\66\u012a\3\2\2\28\u013f\3\2\2\2:\u0141\3\2\2")
         buf.write("\2<>\5\4\3\2=<\3\2\2\2>A\3\2\2\2?=\3\2\2\2?@\3\2\2\2@")
         buf.write("B\3\2\2\2A?\3\2\2\2BC\7\2\2\3C\3\3\2\2\2DP\5\6\4\2EP\5")
         buf.write("\n\6\2FP\5\20\t\2GP\5\32\16\2HP\5\34\17\2IP\5\26\f\2J")
@@ -138,20 +139,24 @@ def serializedATN():
         buf.write("\3\2\2\2\u0124\u0125\3\2\2\2\u0125\65\3\2\2\2\u0126\u0124")
         buf.write("\3\2\2\2\u0127\u0128\7P\2\2\u0128\u012b\5\66\34\2\u0129")
         buf.write("\u012b\58\35\2\u012a\u0127\3\2\2\2\u012a\u0129\3\2\2\2")
-        buf.write("\u012b\67\3\2\2\2\u012c\u0137\7g\2\2\u012d\u0137\7h\2")
-        buf.write("\2\u012e\u0137\7f\2\2\u012f\u0137\5\f\7\2\u0130\u0137")
-        buf.write("\5:\36\2\u0131\u0137\5\24\13\2\u0132\u0133\7V\2\2\u0133")
-        buf.write("\u0134\5*\26\2\u0134\u0135\7W\2\2\u0135\u0137\3\2\2\2")
-        buf.write("\u0136\u012c\3\2\2\2\u0136\u012d\3\2\2\2\u0136\u012e\3")
-        buf.write("\2\2\2\u0136\u012f\3\2\2\2\u0136\u0130\3\2\2\2\u0136\u0131")
-        buf.write("\3\2\2\2\u0136\u0132\3\2\2\2\u01379\3\2\2\2\u0138\u0139")
-        buf.write("\7Z\2\2\u0139\u013e\5*\26\2\u013a\u013b\7\\\2\2\u013b")
-        buf.write("\u013d\5*\26\2\u013c\u013a\3\2\2\2\u013d\u0140\3\2\2\2")
-        buf.write("\u013e\u013c\3\2\2\2\u013e\u013f\3\2\2\2\u013f\u0141\3")
-        buf.write("\2\2\2\u0140\u013e\3\2\2\2\u0141\u0142\7[\2\2\u0142;\3")
-        buf.write("\2\2\2\34?Ofq\177\u008d\u0095\u0098\u009d\u00a7\u00ac")
-        buf.write("\u00b0\u00b5\u00c8\u00d4\u00e2\u00ed\u00f8\u0104\u010c")
-        buf.write("\u0114\u011c\u0124\u012a\u0136\u013e")
+        buf.write("\u012b\67\3\2\2\2\u012c\u0140\7g\2\2\u012d\u0140\7h\2")
+        buf.write("\2\u012e\u0135\7f\2\2\u012f\u0130\7Z\2\2\u0130\u0131\5")
+        buf.write("*\26\2\u0131\u0132\7[\2\2\u0132\u0134\3\2\2\2\u0133\u012f")
+        buf.write("\3\2\2\2\u0134\u0137\3\2\2\2\u0135\u0133\3\2\2\2\u0135")
+        buf.write("\u0136\3\2\2\2\u0136\u0140\3\2\2\2\u0137\u0135\3\2\2\2")
+        buf.write("\u0138\u0140\5\f\7\2\u0139\u0140\5:\36\2\u013a\u0140\5")
+        buf.write("\24\13\2\u013b\u013c\7V\2\2\u013c\u013d\5*\26\2\u013d")
+        buf.write("\u013e\7W\2\2\u013e\u0140\3\2\2\2\u013f\u012c\3\2\2\2")
+        buf.write("\u013f\u012d\3\2\2\2\u013f\u012e\3\2\2\2\u013f\u0138\3")
+        buf.write("\2\2\2\u013f\u0139\3\2\2\2\u013f\u013a\3\2\2\2\u013f\u013b")
+        buf.write("\3\2\2\2\u01409\3\2\2\2\u0141\u0142\7Z\2\2\u0142\u0147")
+        buf.write("\5*\26\2\u0143\u0144\7\\\2\2\u0144\u0146\5*\26\2\u0145")
+        buf.write("\u0143\3\2\2\2\u0146\u0149\3\2\2\2\u0147\u0145\3\2\2\2")
+        buf.write("\u0147\u0148\3\2\2\2\u0148\u014a\3\2\2\2\u0149\u0147\3")
+        buf.write("\2\2\2\u014a\u014b\7[\2\2\u014b;\3\2\2\2\35?Ofq\177\u008d")
+        buf.write("\u0095\u0098\u009d\u00a7\u00ac\u00b0\u00b5\u00c8\u00d4")
+        buf.write("\u00e2\u00ed\u00f8\u0104\u010c\u0114\u011c\u0124\u012a")
+        buf.write("\u0135\u013f\u0147")
         return buf.getvalue()
 
 
@@ -2584,6 +2589,25 @@ class DeepLearningParser ( Parser ):
         def ID(self):
             return self.getToken(DeepLearningParser.ID, 0)
 
+        def LBRACK(self, i:int=None):
+            if i is None:
+                return self.getTokens(DeepLearningParser.LBRACK)
+            else:
+                return self.getToken(DeepLearningParser.LBRACK, i)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(DeepLearningParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(DeepLearningParser.ExprContext,i)
+
+
+        def RBRACK(self, i:int=None):
+            if i is None:
+                return self.getTokens(DeepLearningParser.RBRACK)
+            else:
+                return self.getToken(DeepLearningParser.RBRACK, i)
+
         def matrixLiteral(self):
             return self.getTypedRuleContext(DeepLearningParser.MatrixLiteralContext,0)
 
@@ -2598,10 +2622,6 @@ class DeepLearningParser ( Parser ):
 
         def LPAREN(self):
             return self.getToken(DeepLearningParser.LPAREN, 0)
-
-        def expr(self):
-            return self.getTypedRuleContext(DeepLearningParser.ExprContext,0)
-
 
         def RPAREN(self):
             return self.getToken(DeepLearningParser.RPAREN, 0)
@@ -2624,10 +2644,11 @@ class DeepLearningParser ( Parser ):
 
         localctx = DeepLearningParser.PrimaryContext(self, self._ctx, self.state)
         self.enterRule(localctx, 54, self.RULE_primary)
+        self._la = 0 # Token type
         try:
-            self.state = 308
+            self.state = 317
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,24,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,25,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 298
@@ -2644,33 +2665,47 @@ class DeepLearningParser ( Parser ):
                 self.enterOuterAlt(localctx, 3)
                 self.state = 300
                 self.match(DeepLearningParser.ID)
+                self.state = 307
+                self._errHandler.sync(self)
+                _la = self._input.LA(1)
+                while _la==DeepLearningParser.LBRACK:
+                    self.state = 301
+                    self.match(DeepLearningParser.LBRACK)
+                    self.state = 302
+                    self.expr()
+                    self.state = 303
+                    self.match(DeepLearningParser.RBRACK)
+                    self.state = 309
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
+
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 301
+                self.state = 310
                 self.matrixLiteral()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
-                self.state = 302
+                self.state = 311
                 self.arrayLiteral()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
-                self.state = 303
+                self.state = 312
                 self.funcCallExpr()
                 pass
 
             elif la_ == 7:
                 self.enterOuterAlt(localctx, 7)
-                self.state = 304
+                self.state = 313
                 self.match(DeepLearningParser.LPAREN)
-                self.state = 305
+                self.state = 314
                 self.expr()
-                self.state = 306
+                self.state = 315
                 self.match(DeepLearningParser.RPAREN)
                 pass
 
@@ -2731,23 +2766,23 @@ class DeepLearningParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 310
+            self.state = 319
             self.match(DeepLearningParser.LBRACK)
-            self.state = 311
+            self.state = 320
             self.expr()
-            self.state = 316
+            self.state = 325
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==DeepLearningParser.COMMA:
-                self.state = 312
+                self.state = 321
                 self.match(DeepLearningParser.COMMA)
-                self.state = 313
+                self.state = 322
                 self.expr()
-                self.state = 318
+                self.state = 327
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 319
+            self.state = 328
             self.match(DeepLearningParser.RBRACK)
         except RecognitionException as re:
             localctx.exception = re

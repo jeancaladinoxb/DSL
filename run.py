@@ -9,6 +9,6 @@ tokens = CommonTokenStream(lexer)
 parser = DeepLearningParser(tokens)
 
 tree = parser.program()
+
 visitor = DeepLearningVisitorImpl()
-# Ejecuta el arbol:
 tree.accept(visitor)

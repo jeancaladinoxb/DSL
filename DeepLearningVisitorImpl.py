@@ -1,4 +1,3 @@
-
 class ReturnValue(Exception):
     def __init__(self, value):
         self.value = value
@@ -465,7 +464,23 @@ class DeepLearningVisitorImpl:
             s = ctx.STRING().getText()
             return s[1:-1].encode('utf-8').decode('unicode_escape')
         if ctx.ID():
-            return self.get_var(ctx.ID().getText())
+            name = ctx.ID().getText()
+            base = self.get_var(name)
+            i = 1
+            while i < ctx.getChildCount():
+                ch = ctx.getChild(i)
+                if ch.getText() == '[':
+                    expr_ctx = ctx.getChild(i+1)
+                    index_val = self.visit(expr_ctx)
+                    try:
+                        idx = int(index_val)
+                    except Exception:
+                        idx = index_val
+                    base = base[idx]
+                    i += 3
+                    continue
+                i += 1
+            return base
         if ctx.matrixLiteral():
             return self.visit(ctx.matrixLiteral())
         if ctx.arrayLiteral():
@@ -474,7 +489,7 @@ class DeepLearningVisitorImpl:
             return self.visit(ctx.funcCallExpr())
         if ctx.getChildCount() == 3 and ctx.getChild(0).getText() == "(":
             return self.visit(ctx.expr())
-        raise NotImplementedError("primary not manejado")
+        raise NotImplementedError("primary no manejado: %s" % ctx.getText())
 
     def _binary_add(self, a, b):
         if isinstance(a, list) and isinstance(b, list):

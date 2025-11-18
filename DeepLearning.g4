@@ -162,7 +162,7 @@ unaryExpr
 primary
     : NUMBER
     | STRING
-    | ID
+    | ID (LBRACK expr RBRACK)* 
     | matrixLiteral
     | arrayLiteral
     | funcCallExpr
