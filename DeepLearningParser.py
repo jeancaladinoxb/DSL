@@ -393,6 +393,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitProgram" ):
                 listener.exitProgram(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitProgram" ):
+                return visitor.visitProgram(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -485,6 +491,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitStatement" ):
+                return visitor.visitStatement(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -595,6 +607,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitAssignment" ):
                 listener.exitAssignment(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignment" ):
+                return visitor.visitAssignment(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -648,6 +666,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAssignNoSemi" ):
                 listener.exitAssignNoSemi(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAssignNoSemi" ):
+                return visitor.visitAssignNoSemi(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -706,6 +730,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMatrixDecl" ):
                 listener.exitMatrixDecl(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMatrixDecl" ):
+                return visitor.visitMatrixDecl(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -771,6 +801,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMatrixLiteral" ):
                 listener.exitMatrixLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMatrixLiteral" ):
+                return visitor.visitMatrixLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -846,6 +882,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitRow" ):
                 listener.exitRow(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRow" ):
+                return visitor.visitRow(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -916,6 +958,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitModelDecl" ):
                 listener.exitModelDecl(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitModelDecl" ):
+                return visitor.visitModelDecl(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1001,6 +1049,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitMlpDecl" ):
                 listener.exitMlpDecl(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMlpDecl" ):
+                return visitor.visitMlpDecl(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1265,6 +1319,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitFuncCallExpr" ):
                 listener.exitFuncCallExpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFuncCallExpr" ):
+                return visitor.visitFuncCallExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1366,6 +1426,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitPrintStmt" ):
                 listener.exitPrintStmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrintStmt" ):
+                return visitor.visitPrintStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1431,6 +1497,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArgs" ):
                 listener.exitArgs(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArgs" ):
+                return visitor.visitArgs(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1505,6 +1577,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitIfStmt" ):
                 listener.exitIfStmt(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIfStmt" ):
+                return visitor.visitIfStmt(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -1614,6 +1692,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitForStmt" ):
                 listener.exitForStmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitForStmt" ):
+                return visitor.visitForStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1708,6 +1792,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitWhileStmt" ):
                 listener.exitWhileStmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitWhileStmt" ):
+                return visitor.visitWhileStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1794,6 +1884,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitDoWhileStmt" ):
                 listener.exitDoWhileStmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitDoWhileStmt" ):
+                return visitor.visitDoWhileStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1867,6 +1963,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitFuncDecl" ):
                 listener.exitFuncDecl(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitFuncDecl" ):
+                return visitor.visitFuncDecl(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1936,6 +2038,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitParams" ):
                 listener.exitParams(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitParams" ):
+                return visitor.visitParams(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -1997,6 +2105,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitReturnStmt" ):
                 listener.exitReturnStmt(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitReturnStmt" ):
+                return visitor.visitReturnStmt(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2052,6 +2166,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitBlock" ):
                 listener.exitBlock(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitBlock" ):
+                return visitor.visitBlock(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2106,6 +2226,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpr" ):
                 listener.exitExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitExpr" ):
+                return visitor.visitExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2163,6 +2289,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitEqualityExpr" ):
                 listener.exitEqualityExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitEqualityExpr" ):
+                return visitor.visitEqualityExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2251,6 +2383,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitRelationalExpr" ):
                 listener.exitRelationalExpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitRelationalExpr" ):
+                return visitor.visitRelationalExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2325,6 +2463,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitAddExpr" ):
                 listener.exitAddExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAddExpr" ):
+                return visitor.visitAddExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2407,6 +2551,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitMulExpr" ):
                 listener.exitMulExpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitMulExpr" ):
+                return visitor.visitMulExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2476,6 +2626,12 @@ class DeepLearningParser ( Parser ):
             if hasattr( listener, "exitPowExpr" ):
                 listener.exitPowExpr(self)
 
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPowExpr" ):
+                return visitor.visitPowExpr(self)
+            else:
+                return visitor.visitChildren(self)
+
 
 
 
@@ -2537,6 +2693,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitUnaryExpr" ):
                 listener.exitUnaryExpr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitUnaryExpr" ):
+                return visitor.visitUnaryExpr(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2636,6 +2798,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrimary" ):
                 listener.exitPrimary(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrimary" ):
+                return visitor.visitPrimary(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
@@ -2755,6 +2923,12 @@ class DeepLearningParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitArrayLiteral" ):
                 listener.exitArrayLiteral(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitArrayLiteral" ):
+                return visitor.visitArrayLiteral(self)
+            else:
+                return visitor.visitChildren(self)
 
 
 
